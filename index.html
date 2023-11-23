@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrastrar y soltar cartas</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Wx4v33yjszFAWzJr+po/S5M2a86pPBQQ5N5p0BYq+0ENaXZ/ICF4IuAZURUAQ4zQ" crossorigin="anonymous" />
+
+    
+</head>
+
+<body>
+    <div class="titulo">
+        <p>¡CRECIENDO JUNTOS!</p>
+    </div>
+
+    <div id="contenedor-superior">
+        <div class="carta" id="carta-superior-1">
+            <div class="card-info"></div>
+        </div>
+        <div class="carta" id="carta-superior-2">
+            <div class="card-info"></div>
+        </div>
+        <div class="carta" id="carta-superior-3">
+            <div class="card-info"></div>
+        </div>
+        <div class="carta" id="carta-superior-4">
+            <div class="card-info"></div>
+        </div>
+
+    </div>
+
+    <div class="linea-de-tiempo">
+        <div class="inicio">Inicio</div>
+        <div class="final">Final</div>
+        <div class="evento evento1">
+            <div class="evento-texto">Fase 1</div>
+        </div>
+        <div class="evento evento2">
+            <div class="evento-texto">Fase 2</div>
+        </div>
+        <div class="evento evento3">
+            <div class="evento-texto">Fase 3</div>
+        </div>
+        <div class="evento evento4">
+            <div class="evento-texto">Fase 4</div>
+        </div>
+
+
+    </div>
+
+    <div id="contenedor-inferior">
+        <div class="carta card" id="carta-inferior-1">
+            <div class="card-info">
+                <img src="images/PASO_1.png" alt="">
+            </div>
+        </div>
+        <div class="carta card" id="carta-inferior-2">
+            <div class="card-info">
+                <img src="images/PASO_2.png" alt="">
+            </div>
+        </div>
+        <div class="carta card" id="carta-inferior-3">
+            <div class="card-info">
+                <img src="images/PASO_3.png" alt="">
+            </div>
+        </div>
+        <div class="carta card" id="carta-inferior-4">
+            <div class="card-info">
+                <img src="images/PASO_4.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="btnFin">
+        <button class="bn632-hover bn27" id="verificarBtn">Verificar</button>
+    </div>
+
+    <div id="mensaje"></div>
+
+    <!-- Ventana modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()"><img src="images/cerrar.png" alt=""></span>
+            <p id="mensajeModal"></p>
+            <button type="button"  onclick="reiniciarJuego()"  class="css-button-shadow-border-sliding--green">Intentarlo de nuevo</button>
+        </div>
+    </div>
+
+
+    <audio id="sonidoCarta" src="images/movercarta.mp3"></audio>
+    <audio id="sonidoResultado"></audio>
+    
+
+
+
+    <script src="//code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

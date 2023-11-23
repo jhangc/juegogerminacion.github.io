@@ -1,0 +1,333 @@
+ @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+ body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   background-image: url('images/fondo.jpg');
+   /* Reemplaza 'ruta_de_tu_imagen.jpg' con la ruta de tu imagen de fondo */
+   background-size: cover;
+   /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
+   background-position: center;
+   /* Centra la imagen de fondo */
+ }
+
+ .titulo {
+   text-align: center;
+   font-size: 50px;
+   font-family: 'Pacifico', cursive;
+   font-weight: 900;
+   margin-top: -3%;
+   padding: 0;
+   background: rgb(180, 58, 177);
+   background: linear-gradient(90deg, rgba(180, 58, 177, 1) 3%, rgba(253, 29, 29, 0.9389005602240896) 61%, rgba(252, 176, 69, 1) 100%);
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+ }
+
+ #contenedor-superior,
+ #contenedor-inferior {
+   display: flex;
+   justify-content: center;
+   padding: 20px 0;
+   flex: 1;
+   max-width: 100%;
+ }
+
+ #contenedor-superior {
+   margin-top: -5%;
+ }
+
+ .carta {
+   width: 109px;
+   /* Ancho de la carta */
+   height: 200px;
+   /* Altura de la carta */
+   margin: 0px 4%;
+   padding: 7px;
+   cursor: pointer;
+   background-color: #fff;
+   --background: linear-gradient(to left, #8c43f2 0%, #ff5c00 100%);
+   border-radius: 01rem;
+   overflow: visible;
+   background: #8c43f2;
+   background: var(--background);
+   position: relative;
+   z-index: 1;
+ }
+
+ .carta img {
+   width: 100%;
+   height: 100%;
+ }
+
+ .carta::after {
+   position: absolute;
+   content: "";
+   top: 40px;
+   left: 0;
+   right: 0;
+   z-index: -1;
+   height: 100%;
+   width: 100%;
+   transform: scale(0.9);
+   filter: blur(30px);
+   background: #8c43f2;
+   background: var(--background);
+   transition: opacity 0.5s;
+ }
+
+ .card-info {
+   --color: #ffffff;
+   background: var(--color);
+   color: var(--color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   overflow: visible;
+   border-radius: 0.6rem;
+ }
+
+
+ /*Hover*/
+ .card:hover::after {
+   opacity: 0;
+ }
+
+ .card:hover .card-info {
+   color: #8c43f2;
+   transition: color 1s;
+ }
+
+ .linea-de-tiempo {
+   position: relative;
+   width: 70%;
+   height: 30px;
+   /* Ajusta la altura de la línea de tiempo */
+   background-color: #fff;
+   margin: 0 auto;
+   /* Centra la línea de tiempo */
+   display: flex;
+   align-items: center;
+
+ }
+
+ .evento {
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   background-color: #333;
+   border-radius: 50%;
+   margin: 0 10px;
+   /* Ajusta el espacio entre eventos */
+ }
+
+ .evento:hover {
+   background-color: #ff5733;
+   /* Cambia el color al pasar el ratón sobre el evento */
+ }
+
+ .evento-texto {
+   position: absolute;
+   top: -30px;
+   /* Ajusta la posición vertical del texto */
+   text-align: center;
+   width: 80px;
+   /* Ajusta el ancho del contenedor de texto */
+   left: 50%;
+   transform: translateX(-50%);
+ }
+
+ .inicio {
+   left: 0;
+ }
+
+ .evento1 {
+   left: 10%;
+ }
+
+ .evento2 {
+   left: 35%;
+ }
+
+ .evento3 {
+   left: 61%;
+ }
+
+ .evento4 {
+   left: 87%;
+ }
+
+ .final {
+   right: 0;
+ }
+
+ .inicio,
+ .final {
+   position: absolute;
+   top: 7.5px;
+   /* Ajusta la posición vertical según sea necesario */
+   font-size: 14px;
+   margin: 0 5px;
+   font-weight: bold;
+ }
+
+ .inicio {
+   left: 0;
+ }
+
+ .final {
+   right: 0;
+ }
+
+ .btnFin {
+  display: flex;
+  justify-content: space-around;
+ }
+
+ .bn632-hover {
+   width: 160px;
+   font-size: 16px;
+   font-weight: 600;
+   color: #fff;
+   cursor: pointer;
+   margin: 20px;
+   height: 55px;
+   text-align: center;
+   border: none;
+   background-size: 300% 100%;
+   border-radius: 50px;
+   moz-transition: all .4s ease-in-out;
+   -o-transition: all .4s ease-in-out;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .4s ease-in-out;
+ }
+
+ .bn632-hover:hover {
+   background-position: 100% 0;
+   moz-transition: all .4s ease-in-out;
+   -o-transition: all .4s ease-in-out;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .4s ease-in-out;
+ }
+
+ .bn632-hover:focus {
+   outline: none;
+ }
+
+ .bn632-hover.bn27 {
+   background-image: linear-gradient(to right,
+       #ed6ea0,
+       #ec8c69,
+       #f7186a,
+       #fbb03b);
+   box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+ }
+
+ #mensaje {
+  display: none;
+  font-size: 18px;
+  color: green;
+  margin-top: 10px;
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  position: relative;
+  background: url('images/fondo-modal.jpg') center center / cover no-repeat; /* Reemplaza 'tu-imagen-de-fondo.jpg' con el nombre correcto de tu imagen */
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 8px 8px rgba(8, 92, 160, 0.5); /* Sombra */
+  width: 20%;
+  text-align: center;
+  color: #fff; /* Cambia el color del texto */
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 5px; /* Ajusta la posición desde la parte superior */
+  right: 5px; /* Ajusta la posición desde la derecha */
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close img {
+  width: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Estilos para el texto dentro de la modal */
+#mensajeModal {
+  font-size: 24px; /* Tamaño de fuente */
+  font-family: 'Pacifico', cursive;
+  font-weight: bold; /* Peso de la fuente */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+.css-button-shadow-border-sliding--green {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  background: #57cc99;
+ z-index: 1;
+}
+.css-button-shadow-border-sliding--green:hover:after {
+  width: 100%;
+  left: 0;
+}
+.css-button-shadow-border-sliding--green:after {
+  border-radius: 5px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+  background-color: #80ed99;
+  right: 0;
+}
+.css-button-shadow-border-sliding--green:active {
+  top: 2px;
+}
+
